@@ -1,4 +1,5 @@
 // rewrite the JSON.stringify functinality
+// need to remove the last trailing commas, after objects:
 
 
 function stringify(data) {
@@ -14,27 +15,19 @@ function stringify(data) {
         for (let i = 0; i < data.length; i++) {
             let item = data[i];
             let itemType = checkType(item);
-            if (itemType === 'primitive') {
-                string += item;
-            } else {
-                string += stringify(item);
-            }
+            string += itemType === 'primitive' ? item : stringify(item);
             if (i != data.length - 1) string += ', '
         }
-        string += ` ]`
+        string += ` ], `
     } else if (type === 'object') {
         string += '{ '
-        for (let key in obj) {
-            let item = obj[key];
+        for (let key in data) {
+            let item = data[key];
             let itemType = checkType(item);
-            string += `${key} :`
-            if (itemType === 'primitive') {
-                string += item;
-            } else {
-                string += stringify(item);
-            }
+            string += `${key} : `
+            string += itemType === 'primitive' ? item : stringify(item);
         }
-        string += ' }'
+        string += ' },'
     }
     return string;
 }
@@ -48,4 +41,5 @@ let obj = {
     3: 'x'
 };
 
-console.log(stringify(obj));
+let result = stringify(obj)
+console.log(typeof result, result);
