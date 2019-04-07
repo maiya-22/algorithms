@@ -36,8 +36,6 @@ Array.prototype.reduce = function (func, combinator) {
     return combinator;
 }
 
-
-
 console.log('result:',
     [1, 2, 3, 4, 5, 6]
         .reduce((item, combinator, index) => {
