@@ -10,9 +10,12 @@ const reduce = (arr, func, combinator) => {
     return combinator;
 }
 
-let result = reduce(arr, (item, combinator, index) => {
-    combinator[item] = true;
-    return combinator;
-}, {});
+let result = reduce(
+    arr,
+    (item, combinator, index) => {
+        combinator[item] = true;
+        return combinator;
+    },
+    {});
 
 console.log('result:', result);
