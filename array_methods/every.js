@@ -1,5 +1,5 @@
 'use strict';
-// re-create Array.prototype.every
+// re-create Array.prototype.every functionality
 
 Array.prototype.every = function (func, thisValue) {
     let array = this;

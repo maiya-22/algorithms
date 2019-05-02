@@ -1,9 +1,7 @@
-### Algorithms
-
-- binary-tree.js
+### Algorithm Solutions
 
 #### to run code:
 
-##### in terminal: 
-
-- node name-of-file
+- In the terminal, type "node" + the name of the file-path
+- i.e.
+- node [folder-name]/[name-of-file]

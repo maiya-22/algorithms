@@ -1,4 +1,4 @@
-// Recreate Array.filter function
+// Recreate Array.filter function functionality
 
 Array.prototype.filter = function (func) {
     let arr = [];

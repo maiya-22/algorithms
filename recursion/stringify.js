@@ -1,7 +1,6 @@
 // rewrite the JSON.stringify functinality
 // need to remove the last trailing commas, after objects:
 
-
 function stringify(data) {
     let string = "";
     const checkType = (item) => {

@@ -1,5 +1,5 @@
 
-// Recreate Array.map:
+// Recreate Array.map functionality:
 
 Array.prototype.map = function (func) {
     let arr = [...this];
